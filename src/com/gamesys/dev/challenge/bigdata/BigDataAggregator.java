@@ -5,6 +5,7 @@ import static java.util.stream.Collectors.summingDouble;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 import java.util.function.Function;
@@ -48,7 +49,22 @@ public class BigDataAggregator {
         return findAggregatedResult(partnerFileName, exchangeRateFileName, currencyCode, partnerName -> true);
     }
 
-    public static void main(String args[]){
-
+    public static void main(String args[]) throws IOException {
+        switch(args.length){
+        case 3:
+            Map<String, Double> aggregatedResult = findAggregatedResult(args[0], args[1], args[2]);
+            Path path = Paths.get("aggregate.csv");
+            Files.write(path, aggregatedResult.entrySet().stream().map(
+                    e -> e.getKey() + "," + e.getValue()).collect(Collectors.toList()));
+            System.out.println("Created output file " + path.toAbsolutePath());
+            break;
+        case 4:
+            Double amountForPartnerAndCurrency = aggregatedAmountForPartnerAndCurrency(args[0], args[1], args[2], args[3]);
+            System.out.println(amountForPartnerAndCurrency);
+            break;
+        default:
+            System.out.println("Please refer the link xxx for script usage");
+            break;
+        }
     }
 }
