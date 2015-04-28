@@ -31,7 +31,6 @@ public class BigDataAggregator {
         rateMap.put(currencyCode, 1.0);
 
         try (Stream<String> lines = Files.lines(Paths.get(partnerTransactionFileName))) {
-
             return lines.parallel().map(s -> s.split(","))
                     .filter(array -> partnerFilter.test(array[0]))
                     .collect(groupingBy(array -> array[0],
@@ -52,14 +51,26 @@ public class BigDataAggregator {
     public static void main(String args[]) throws IOException {
         switch(args.length){
         case 3:
+            long startTime = System.currentTimeMillis();
             Map<String, Double> aggregatedResult = findAggregatedResult(args[0], args[1], args[2]);
+            long endTime = System.currentTimeMillis();
+            long timeTaken = endTime - startTime;
+            System.out.println("Time in Milliseconds : " +timeTaken);
+
+            //Write result to csv
             Path path = Paths.get("aggregate.csv");
             Files.write(path, aggregatedResult.entrySet().stream().map(
                     e -> e.getKey() + "," + e.getValue()).collect(Collectors.toList()));
             System.out.println("Created output file " + path.toAbsolutePath());
             break;
         case 4:
+            startTime = System.currentTimeMillis();
             Double amountForPartnerAndCurrency = aggregatedAmountForPartnerAndCurrency(args[0], args[1], args[2], args[3]);
+            endTime = System.currentTimeMillis();
+            timeTaken = endTime - startTime;
+            System.out.println("Time in Milliseconds : " + timeTaken);
+
+            //Print output
             System.out.println(amountForPartnerAndCurrency);
             break;
         default:
