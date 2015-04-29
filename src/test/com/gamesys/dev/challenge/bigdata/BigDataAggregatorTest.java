@@ -33,11 +33,6 @@ public class BigDataAggregatorTest {
 
         Map<String, Double> aggregatedResultMap = BigDataAggregator.findAggregatedResult(partnerFileName, exchangeRateFileName, "GBP");
         Assert.assertEquals(aggregatedResultMap.size(), 3);
-        /*
-        Unlimited ltd.,311.25
-        Local plumber ltd.,136.56
-        Defence ltd,234.75
-         */
         Assert.assertEquals(new Double(310.7060032207), aggregatedResultMap.get("Unlimited ltd."));
         Assert.assertEquals(new Double(134.150076), aggregatedResultMap.get("Local plumber ltd."));
         Assert.assertEquals(new Double(234.11941214805003), aggregatedResultMap.get("Defence ltd."));
