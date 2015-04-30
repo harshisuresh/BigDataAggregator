@@ -5,9 +5,9 @@ https://confluence.gamesys.corp/display/TEAMPOKER/Challenge+1+-+Big+data+aggrega
 
 
 
-## Processing time ##
+#### Processing time ####
 
-# Aggregated result for single partner and currency: #
+#### Aggregated result for single partner and currency: ####
 
 Run1:
 
@@ -49,7 +49,7 @@ Time taken in Milliseconds : 6946
 
 Aggregated amount for partner and currency: 19434179.159068
 
-# Aggregated result for all partners by currency: #
+#### Aggregated result for all partners by currency: ####
 
 Run1:
 
@@ -92,7 +92,7 @@ Time taken in Milliseconds : 13785
 Created output file: /Users/harshitha.suresh/Documents/gitcode/BigDataAggregator/out/artifacts/BigDataAggregator_jar/aggregate.csv
 
 
-# Output: #
+#### Output: ####
 
 XHcZe,1.9429927173705563E7
 eRpyG,1.9419841956112754E7
