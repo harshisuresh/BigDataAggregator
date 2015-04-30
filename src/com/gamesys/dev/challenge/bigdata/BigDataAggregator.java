@@ -71,7 +71,12 @@ public class BigDataAggregator {
             System.out.format("Time taken in Milliseconds : %d%n", timeTaken);
 
             //Print output
-            System.out.format("Aggregated amount for partner and currency: %f%n", amountForPartnerAndCurrency);
+            if(amountForPartnerAndCurrency != null) {
+                System.out.format("Aggregated amount for partner and currency: %f%n", amountForPartnerAndCurrency);
+            }
+            else{
+                System.out.println("Partner not found");
+            }
             break;
         default:
             System.out.format("Please refer the link https://confluence.gamesys.corp/display/TEAMPOKER/Challenge+1+-+Big+data+aggregator  for script usage %n");
