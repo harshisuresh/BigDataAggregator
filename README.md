@@ -5,9 +5,9 @@ https://confluence.gamesys.corp/display/TEAMPOKER/Challenge+1+-+Big+data+aggrega
 
 
 
-Processing time
+--Processing time
 
-Aggregated result for single partner and currency:
+--Aggregated result for single partner and currency:
 
 Run1:
 
