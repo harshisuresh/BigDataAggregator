@@ -5,74 +5,94 @@ https://confluence.gamesys.corp/display/TEAMPOKER/Challenge+1+-+Big+data+aggrega
 
 
 
-Processing time
+## Processing time ##
 
-Aggregated result for single partner and currency:
+# Aggregated result for single partner and currency: #
 
 Run1:
 
 gl04865m:BigDataAggregator_jar harshitha.suresh$ java -jar BigDataAggregator.jar transactions.csv exchangerates.csv KRS GBP
+
 Time taken in Milliseconds : 8347
+
 Aggregated amount for partner and currency: 19434179.159068
 
 Run2:
 
 gl04865m:BigDataAggregator_jar harshitha.suresh$ java -jar BigDataAggregator.jar transactions.csv exchangerates.csv KRS GBP
+
 Time taken in Milliseconds : 6759
+
 Aggregated amount for partner and currency: 19434179.159068
 
 Run3:
 
 gl04865m:BigDataAggregator_jar harshitha.suresh$ java -jar BigDataAggregator.jar transactions.csv exchangerates.csv KRS GBP
+
 Time taken in Milliseconds : 6798
+
 Aggregated amount for partner and currency: 19434179.159068
 
 Run4:
 
 gl04865m:BigDataAggregator_jar harshitha.suresh$ java -jar BigDataAggregator.jar transactions.csv exchangerates.csv KRS GBP
+
 Time taken in Milliseconds : 6832
+
 Aggregated amount for partner and currency: 19434179.159068
 
 Run5:
 
 gl04865m:BigDataAggregator_jar harshitha.suresh$ java -jar BigDataAggregator.jar transactions.csv exchangerates.csv KRS GBP
+
 Time taken in Milliseconds : 6946
+
 Aggregated amount for partner and currency: 19434179.159068
 
-Aggregated result for all partners by currency:
+# Aggregated result for all partners by currency: #
 
 Run1:
 
 gl04865m:BigDataAggregator_jar harshitha.suresh$ java -jar BigDataAggregator.jar transactions.csv exchangerates.csv GBP
+
 Time taken in Milliseconds : 14792
+
 Created output file: /Users/harshitha.suresh/Documents/gitcode/BigDataAggregator/out/artifacts/BigDataAggregator_jar/aggregate.csv
 
 Run2:
 
 gl04865m:BigDataAggregator_jar harshitha.suresh$ java -jar BigDataAggregator.jar transactions.csv exchangerates.csv GBP
+
 Time taken in Milliseconds : 14349
+
 Created output file: /Users/harshitha.suresh/Documents/gitcode/BigDataAggregator/out/artifacts/BigDataAggregator_jar/aggregate.csv
 
 Run3:
 
 gl04865m:BigDataAggregator_jar harshitha.suresh$ java -jar BigDataAggregator.jar transactions.csv exchangerates.csv GBP
+
 Time taken in Milliseconds : 15219
+
 Created output file: /Users/harshitha.suresh/Documents/gitcode/BigDataAggregator/out/artifacts/BigDataAggregator_jar/aggregate.csv
 
 Run4:
 
 gl04865m:BigDataAggregator_jar harshitha.suresh$ java -jar BigDataAggregator.jar transactions.csv exchangerates.csv GBP
+
 Time taken in Milliseconds : 15515
+
 Created output file: /Users/harshitha.suresh/Documents/gitcode/BigDataAggregator/out/artifacts/BigDataAggregator_jar/aggregate.csv
 
 Run5:
 
 gl04865m:BigDataAggregator_jar harshitha.suresh$ java -jar BigDataAggregator.jar transactions.csv exchangerates.csv GBP
+
 Time taken in Milliseconds : 13785
+
 Created output file: /Users/harshitha.suresh/Documents/gitcode/BigDataAggregator/out/artifacts/BigDataAggregator_jar/aggregate.csv
 
 
-Output:
+# Output: #
 
 XHcZe,1.9429927173705563E7
 eRpyG,1.9419841956112754E7
