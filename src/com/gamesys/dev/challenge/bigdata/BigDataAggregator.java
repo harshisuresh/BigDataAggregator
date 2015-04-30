@@ -55,26 +55,26 @@ public class BigDataAggregator {
             Map<String, Double> aggregatedResult = findAggregatedResult(args[0], args[1], args[2]);
             long endTime = System.currentTimeMillis();
             long timeTaken = endTime - startTime;
-            System.out.println("Time in Milliseconds : " +timeTaken);
+            System.out.format("Time taken in Milliseconds : %d%n", timeTaken);
 
             //Write result to csv
             Path path = Paths.get("aggregate.csv");
             Files.write(path, aggregatedResult.entrySet().stream().map(
                     e -> e.getKey() + "," + e.getValue()).collect(Collectors.toList()));
-            System.out.println("Created output file " + path.toAbsolutePath());
+            System.out.format("Created output file: %s%n", path.toAbsolutePath());
             break;
         case 4:
             startTime = System.currentTimeMillis();
             Double amountForPartnerAndCurrency = aggregatedAmountForPartnerAndCurrency(args[0], args[1], args[2], args[3]);
             endTime = System.currentTimeMillis();
             timeTaken = endTime - startTime;
-            System.out.println("Time in Milliseconds : " + timeTaken);
+            System.out.format("Time taken in Milliseconds : %d%n", timeTaken);
 
             //Print output
-            System.out.println(amountForPartnerAndCurrency);
+            System.out.format("Aggregated amount for partner and currency: %f%n", amountForPartnerAndCurrency);
             break;
         default:
-            System.out.println("Please refer the link xxx for script usage");
+            System.out.format("Please refer the link https://confluence.gamesys.corp/display/TEAMPOKER/Challenge+1+-+Big+data+aggregator  for script usage %n");
             break;
         }
     }
